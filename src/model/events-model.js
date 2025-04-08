@@ -34,6 +34,7 @@ export default class EventsModel extends Observable {
       this._notify(UpdateType.FAILURE);
       return;
     }
+
     try {
       const offers = await this.#pointsApiService.offers;
       this.#offers = offers;
@@ -42,6 +43,7 @@ export default class EventsModel extends Observable {
       this._notify(UpdateType.FAILURE);
       return;
     }
+
     try {
       const destinations = await this.#pointsApiService.destinations;
       this.#destinations = destinations;
